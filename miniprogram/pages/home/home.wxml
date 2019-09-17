@@ -1,0 +1,10 @@
+<!--miniprogram/pages/home/home.wxml-->
+
+<text>登录可以记录最高分数</text>
+<button open-type="getUserInfo" 
+        class='login'
+        bindgetuserinfo="bindGetUserInfo"
+        >授权登录</button>
+
+<button class='start' bind:tap='navigateGame'>游客模式开始游戏</button>
+<button class='start' bind:tap='navigateGameInfo'>登录模式开始游戏</button>

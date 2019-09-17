@@ -1,0 +1,66 @@
+/* miniprogram/pages/game/game.wxss */
+
+.topBar{
+  height: 90rpx;
+  display: flex;
+  justify-content:space-around;
+  flex-wrap: nowrap;
+}
+
+.avatar{
+  width: 90rpx;
+  height: 90rpx;
+}
+
+.startStop{
+  width: 220rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  padding: 0;
+  margin-right: 0;
+  display: inline-block;
+  background-color: gold;
+}
+
+.score{
+  font-size: 40rpx;
+  display:flex;
+  text-align: center;
+  line-height: 90rpx;
+  height: 90rpx;
+}
+
+.best{
+  width: 220rpx;
+}
+
+
+.nowScore{
+  width: 220rpx;
+}
+
+.btnBelow{
+  display: flex;
+  background-color: gold;
+}
+
+.btnVertical{
+flex-grow: 1;
+}
+
+.left{
+  width: 200rpx;
+}
+
+.right{
+  width: 200rpx;
+}
+
+/* .up{
+  height: 125rpx;
+
+}
+
+.down{
+  height: 125rpx;
+} */
