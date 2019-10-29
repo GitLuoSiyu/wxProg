@@ -1,0 +1,16 @@
+/* miniprogram/pages/home/home.wxss */
+text{
+  text-align: center
+}
+.login{
+  background-color: gold;
+  color: red
+}
+
+.start{
+  background-color: gold;
+  height: 200rpx;
+  width: 500rpx;
+  line-height: 200rpx
+
+}

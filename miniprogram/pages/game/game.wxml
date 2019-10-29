@@ -1,0 +1,33 @@
+<!--miniprogram/pages/game/game.wxml-->
+<view class="topBar">
+  <image src="{{avatar}}" class='avatar'></image>
+  <view class='score'>
+  <view class='best' wx:if="{{auth}}">最高分：{{oldOne}}</view>
+  <view class='nowScore'>分数：{{score}}</view>
+  </view>
+  <button class="startStop" bind:tap='handleStart'>{{startStop}}</button>
+</view>
+
+<!-- 游戏地图 -->
+<canvas canvas-id="mapCanvas" 
+        style="background-color:#ADD8E6; height:{{mapHeight}}px; width:100%">
+</canvas>
+
+<!-- 方向控制 -->
+<view class='btnBelow' style="height:{{btnBelow}}px">
+  <button bindtap="handleLeft" class="left"
+          style="line-height:{{btnBelow}}px">←</button>
+  <view class='btnVertical'>
+  <button bindtap="handleUp" class="up" 
+          style="height:{{btnV}}px;line-height:{{btnV}}px">↑</button>
+  <button bindtap="handleDown" class="down" 
+          style="height:{{btnV}}px;line-height:{{btnV}}px">↓</button>
+  </view>
+  <button bindtap="handleRight" class="right"
+          style="line-height:{{btnBelow}}px">→</button>
+</view>
+
+
+
+
+
