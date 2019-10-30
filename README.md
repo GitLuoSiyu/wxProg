@@ -2,8 +2,8 @@
 
 首页
 
-![home](C:\Users\34375\WeChatProjects\miniprogram-2\picforshow\home.png)
+![Image text](https://github.com/xxxxxyn/wxProg/blob/master/picforshow/home.png?raw=true)
 
 游戏界面
 
-![game](C:\Users\34375\WeChatProjects\miniprogram-2\picforshow\game.png)
+![Image text](https://raw.githubusercontent.com/xxxxxyn/wxProg/master/picforshow/game.png)
