@@ -21,7 +21,8 @@ Page({
     auth:0,
     before:1,
     oldOne:'',
-    openid:''
+    openid:'',
+    oldOne:''
   },
 
 
@@ -174,7 +175,7 @@ Page({
         that.setData({
           openid: res.result.openid
         })
-        console.log(that.data.openid);
+        // console.log(that.data.openid);
         db.collection('users').where({
           _openid: that.data.openid
         }).get({
@@ -187,6 +188,18 @@ Page({
             if (res.data.length==0){
               //该用户第一次玩，必须记录分数
               console.log('第一次已记录')
+        // var openid = res.result.openid;
+        // // var id = res.data[0]._id
+        // console.log(openid)
+        // db.collection('users').where({
+        //   _openid: openid
+        // }).get({
+        //   success: res => {
+        //     console.log(res.data)
+        //     var id = res.data[0]._id
+        //     console.log(id)
+        //     if (res.data.length==0){
+        //       //该用户第一次玩，必须记录分数
               db.collection('users').add({
                 data: {
                   score: that.data.score
@@ -198,21 +211,19 @@ Page({
                   console.log('记录不成功')
                 },
               });
-              that.setData({
-                oldOne: res.data[0].score
-              })
-
+              // that.setData({
+              //   oldOne: res.data[0].score
+              // }) 
             }else{
-              var id = res.data[0]._id
-              //不是第一次玩，有一次记录了
               //拿到上一次的分数,如果这次更高分才记录
               that.setData({
                 oldOne: res.data[0].score
               })
-              console.log(that.data.oldOne)
-              console.log(that.data.score)
+              // console.log(that.data.oldOne)
+              // console.log(that.data.score)
+                
               if (that.data.oldOne < that.data.score) {
-                console.log('这次分数比较大')
+                console.log("已经更新分数")
                 db.collection('users').doc(id).update({
                   data: {
                     score: that.data.score
@@ -227,6 +238,9 @@ Page({
           fail:err=>{
             console.log(err)
           }
+              // }
+            // }
+          // },
           })
           
                  

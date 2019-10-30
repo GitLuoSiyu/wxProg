@@ -28,7 +28,14 @@
 			"list": []
 		},
 		"game": {
-			"list": []
+			"current": 0,
+			"list": [
+				{
+					"id": -1,
+					"name": "home",
+					"query": "pages/home/home"
+				}
+			]
 		},
 		"miniprogram": {
 			"current": 1,
