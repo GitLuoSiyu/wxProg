@@ -188,18 +188,6 @@ Page({
             if (res.data.length==0){
               //该用户第一次玩，必须记录分数
               console.log('第一次已记录')
-        // var openid = res.result.openid;
-        // // var id = res.data[0]._id
-        // console.log(openid)
-        // db.collection('users').where({
-        //   _openid: openid
-        // }).get({
-        //   success: res => {
-        //     console.log(res.data)
-        //     var id = res.data[0]._id
-        //     console.log(id)
-        //     if (res.data.length==0){
-        //       //该用户第一次玩，必须记录分数
               db.collection('users').add({
                 data: {
                   score: that.data.score
@@ -238,9 +226,7 @@ Page({
           fail:err=>{
             console.log(err)
           }
-              // }
-            // }
-          // },
+
           })
           
                  
